@@ -53,6 +53,10 @@ body {
   margin-left: 300;
 }
 
+.nav li a:hover {
+  background-color: #001a49;
+}
+
 .nav_link {
   margin-left: auto;
   padding: 0;
@@ -76,39 +80,39 @@ body {
   cursor: pointer;
   display: none;
 }
-.nav_submenu ul li a {
+.nav_link ul > li > a {
   text-decoration: none;
   color: inherit;
   font-size: 14px;
 }
 
-/* .nav .nav_link .nav_submenu li {
+.nav_submenu ul > li > a {
   display: inline-block;
-  width: 150px;
+  /*width: 150px;
   height: 30px;
   padding: 5px 10px;
   background-color: #000;
-  border: 1px solid #000;
+  border: 1px solid #000;*/
   text-align: center;
   color: #fff;
   position: relative;
 }
 
-.nav .nav_link .nav_submenu li:hover {
-  background-color: #fff;
-  color: #000;
-}
-.nav .nav_link .nav_submenu li > ul {
+.nav_submenu ul > li > a {
   display: none;
-}
-
-.nav .nav_link .nav_submenu li:hover > ul {
-  display: block;
   position: absolute;
-  top: 30px;
-  left: 0px;
-} */
+  max-height: -150px;
+}
+/*.nav .nav_link .nav_submenu li > ul {
+  display: none;
+}*/
 
+.nav_submenu:hover > ul > li > a {
+  display: inline-block;
+  position: relative;
+  /* top: 30px;
+  left: 30px;*/
+}
 .nav_img {
   display: block;
   width: 30px;
@@ -116,6 +120,7 @@ body {
 .nav_close {
   display: var(--show, none);
 }
+
 /* Hero container */
 
 .hero_container {
