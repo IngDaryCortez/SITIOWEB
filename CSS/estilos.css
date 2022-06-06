@@ -44,7 +44,17 @@ body {
 }
 
 /* Nav */
+.sub__menu > ul {
+  list-style: none;
+}
 
+.sub__menu > ul > li > a {
+  text-decoration: none;
+}
+
+.sub__menu > ul ::hover a {
+  display: block;
+}
 .nav {
   --padding-container: 0;
   height: 100%;
