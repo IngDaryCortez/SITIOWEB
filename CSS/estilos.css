@@ -44,17 +44,52 @@ body {
 }
 
 /* Nav */
-.sub__menu > ul {
-  list-style: none;
+
+.sub__menu li:hover > a {
+  color: #fff;
 }
 
-.sub__menu > ul > li > a {
-  text-decoration: none;
+.sub__menu ul {
+  position: absolute;
+  top: 40px;
+  left: 0px;
+
+  opacity: 0;
+  background: #222;
+
+  border-radius: 0 0 5px 5px;
+  transition: opacity 0.2s ease 0.1s;
 }
 
-.sub__menu > ul ::hover a {
-  display: block;
+.sub__menu li:hover > ul {
+  opacity: 1;
 }
+
+.sub__menu ul li {
+  height: 0;
+  overflow: hidden;
+  padding: 0;
+
+  transition: height 0.25s ease 0.1s;
+}
+
+.sub__menu li:hover > ul li {
+  height: 36px;
+  overflow: visible;
+  padding: 0;
+}
+
+.sub__menu ul li a {
+  width: 130px;
+  padding: 4px 10px;
+  margin: 0;
+  border: none;
+  border-bottom: 1px solid #353539;
+}
+.sub__menu ul li:last-child a {
+  border: none;
+}
+
 .nav {
   --padding-container: 0;
   height: 100%;
